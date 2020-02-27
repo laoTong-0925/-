@@ -20,6 +20,7 @@ public class Niu {
                 continue;
             } else {
                 m = i+1;
+
             }
         }
     }
