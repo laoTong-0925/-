@@ -1,0 +1,24 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /RongDa
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/travel?serverTimezone=UTC&characterEncoding=utf-8
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: com.analysishtml.demo11.model
+
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper: debug
