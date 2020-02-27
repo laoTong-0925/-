@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.analysishtml.demo11.mapper.ContentMapper">
+
+    <insert id="insert" parameterType="com.analysishtml.demo11.model.Content" useGeneratedKeys="true" keyProperty="id">
+        insert into rongda.content(title,staff_group_id,info_id) values (#{title},#{staffGroupId},#{infoId})
+    </insert>
+
+    <update id="updateById" parameterType="int">
+        update rongda.content set staff_group_id = #{staffGroupId} where id = #{id}
+    </update>
+
+</mapper>
